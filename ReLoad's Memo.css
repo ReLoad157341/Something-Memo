@@ -5,49 +5,49 @@
 
 /* All IE */
 .all_ie {
-background:#F00 \9;
+  background:#F00 \9;
 }
 
 /* IE6 */
 .ie6 {
-_background:#60C; /*for style*/
+  _background:#60C; /*for style*/
 }
 * html .ie6 { /*for css (最為有用)*/
-background:#60C;
+  background:#60C;
 }
 
 /* IE7 */
 .ie7 {
-+background:#6F0; /*for style*/
+  +background:#6F0; /*for style*/
 }
 *:first-child+html .ie7 { /*for css (最為有用)*/
-background:#6F0;
+  background:#6F0;
 }
 *+html .ie7 { /*for css (最為有用)*/
-background:#6F0;
+  background:#6F0;
 }
 
 .ie6_7 {
-*background:#CC9; /*for style*/
+  *background:#CC9; /*for style*/
 }
 
 /* IE8 */
 .ie8 {
-background:#0F0\0/; /*for style註：「\0/」前方不可有空格*/
+  background:#0F0\0/; /*for style註：「\0/」前方不可有空格*/
 }
 @media \0screen { /*for css (最為有用)*/
 .ie8 {
-background:#0F0;
+  background:#0F0;
 }
 }
 
 
 /* IE9 */
 .ie9 {
-background:#FF0 \9\0; /*for style*/
+  background:#FF0 \9\0; /*for style*/
 }
 :root .ie9 { /*for css (最為有用)*/
-background:#FF0;
+  background:#FF0;
 }
 
 
@@ -237,8 +237,8 @@ black-translucent:黑色半透明(不建議使用)
 <link rel="apple-touch-icon" href="img/troie_icon.png" />
 <link rel="apple-touch-icon-precomposed" href="img/troie_icon.png" />
 
-<link rel="apple-touch-icon" 					        href="apple-touch-icon-iphone.png" />
-<link rel="apple-touch-icon" sizes="72x72" 		href="apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" 			href="apple-touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" 	href="apple-touch-icon-ipad.png" />
 <link rel="apple-touch-icon" sizes="114x114" 	href="apple-touch-icon-iphone-retina-display.png" />
 */
 
