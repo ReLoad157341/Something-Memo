@@ -537,21 +537,21 @@ opacity     : 0.5; /*支持CSS3的浏览器(FF 1.5也支持)*/
 /* 圖層陰影效果 *//*0px 1px 10px 0px 有左至右為X軸、Y軸、陰影大小、擴展*/
 /*外陰影*/
 .outside_shadow {
-box-shadow        : 0px 1px 10px 0px #cdac90;
--moz-box-shadow   : 0px 1px 10px 0px #cdac90;
--webkit-box-shadow: 0px 1px 10px 0px #cdac90;
-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90')"; /*For IE 8*/
+  box-shadow        : 0px 1px 10px 0px #cdac90;
+  -moz-box-shadow   : 0px 1px 10px 0px #cdac90;
+  -webkit-box-shadow: 0px 1px 10px 0px #cdac90;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90')"; /*For IE 8*/
 }
 
 /*內陰影*/
 .inside_shadow {
-box-shadow        :inset 0px 1px 10px 0px #cdac90;
--moz-box-shadow   :inset 0px 1px 10px 0px #cdac90;
--webkit-box-shadow:inset 0px 1px 10px 0px #cdac90;
--webkit-appearance:none;/*iphone開發下遇到的 input 內陰影無法出現的解決方法*/
-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90')"; /*For IE 8*/
+  box-shadow        :inset 0px 1px 10px 0px #cdac90;
+  -moz-box-shadow   :inset 0px 1px 10px 0px #cdac90;
+  -webkit-box-shadow:inset 0px 1px 10px 0px #cdac90;
+  -webkit-appearance:none;/*iphone開發下遇到的 input 內陰影無法出現的解決方法*/
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90')"; /*For IE 8*/
 }
 
 /*上下內陰影*/
@@ -590,31 +590,31 @@ a.button:hover, a.button:active {background:url(images/main_buttons.png) /*-398p
 /* 背景屬性 */
 /*背景圖尺寸（數值表示方式）*/
 .background-size{
-background-size:300px 100px;
+  background-size:300px 100px;
 }
 /*背景圖尺寸（百分比表示方式）*/
 .background-size2{
-background-size:40% 80%;
+  background-size:40% 80%;
 }
 /*背景圖尺寸（等比擴展圖片來填滿元素，即cover值）*/
 .background-size3{
-background-size:cover;
+  background-size:cover;
 }
 /*背景圖尺寸（等比縮小圖片來適應元素的尺寸，即contain值）*/
 .background-size4{
-background-size:contain;
+  background-size:contain;
 }
 /*背景圖尺寸（以圖片自身大小來填充元素，即auto值）*/
 .background-size5{
-background-size:auto;
+  background-size:auto;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
 
 .text {
-text-align  : justify; /*文字齊行*/
-text-justify: distribute; /*文字左右齊行*/
-text-justify: inter-ideograph; /*英文字斷行*/
+  text-align  : justify; /*文字齊行*/
+  text-justify: distribute; /*文字左右齊行*/
+  text-justify: inter-ideograph; /*英文字斷行*/
 }
 
 /*強制文字水平排列不換行(遇空白也不換行)*/
@@ -639,9 +639,9 @@ text-justify: inter-ideograph; /*英文字斷行*/
 
 /*中文字左右分散齊行*/
 .chinese-text {
-text-align     : justify;
-text-justify   : distribute-all-lines;
-text-align-last: justify;
+  text-align     : justify;
+  text-justify   : distribute-all-lines;
+  text-align-last: justify;
 }
 
 
@@ -655,13 +655,13 @@ input[type="button"] { }
 
 /*進度條立體陰影*/
 .progress_bars {
-width:auto;
-height:auto;
-border-radius: 13px;
-box-shadow: 0px 1px 5px 0px #555/*全域陰影*/,
-			inset 0px 10px 10px -8px #fff/*上陰影*/,
-			inset 0px 1px 1px 0px #ddd/*1px 上陰影*/,
-			inset 0px -8px 8px -9px #666/*下陰影*/;
+  width:auto;
+  height:auto;
+  border-radius: 13px;
+  box-shadow: 0px 1px 5px 0px #555/*全域陰影*/,
+	      inset 0px 10px 10px -8px #fff/*上陰影*/,
+	      inset 0px 1px 1px 0px #ddd/*1px 上陰影*/,
+	      inset 0px -8px 8px -9px #666/*下陰影*/;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
