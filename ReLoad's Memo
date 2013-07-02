@@ -1,0 +1,726 @@
+ /*---Css Hack--- */
+
+
+/*-----------------For IE-----------------*/
+
+/* All IE */
+.all_ie {
+background:#F00 \9;
+}
+
+/* IE6 */
+.ie6 {
+_background:#60C; /*for style*/
+}
+* html .ie6 { /*for css (最為有用)*/
+background:#60C;
+}
+
+/* IE7 */
+.ie7 {
++background:#6F0; /*for style*/
+}
+*:first-child+html .ie7 { /*for css (最為有用)*/
+background:#6F0;
+}
+*+html .ie7 { /*for css (最為有用)*/
+background:#6F0;
+}
+
+.ie6_7 {
+*background:#CC9; /*for style*/
+}
+
+/* IE8 */
+.ie8 {
+background:#0F0\0/; /*for style註：「\0/」前方不可有空格*/
+}
+@media \0screen { /*for css (最為有用)*/
+.ie8 {
+background:#0F0;
+}
+}
+
+
+/* IE9 */
+.ie9 {
+background:#FF0 \9\0; /*for style*/
+}
+:root .ie9 { /*for css (最為有用)*/
+background:#FF0;
+}
+
+
+/* @media hacks */
+ 
+/* IE6/7 only) */
+@media screen\9 {
+
+}
+ 
+/* IE6/7/8 */
+@media \0screen\,screen\9 {
+
+} 
+ 
+/* IE8 */
+@media \0screen {
+
+}
+ 
+/* IE8/9 */
+@media screen\0 {
+
+}
+
+/*
+<!--[if IE]>內容<![endif]-->
+內容只有 IE 會顯現。
+
+<!--[if IE 6]>內容<![endif]-->
+內容只有 IE6 會顯現。
+
+<!--[if lt IE 7]>內容<![endif]-->
+內容只在比 IE7 更舊的版本會顯現。
+
+<!--[if gte IE 8]>內容<![endif]-->
+內容只有 IE8 及其較新版本會顯現。
+
+<!--[if !IE]>-->內容<!--<![endif]-->
+內容除 IE 以外都會顯現。
+
+<!--[if !(IE 6)]>內容<![endif]-->
+內容除 IE6 以外的 IE 都會顯現。
+
+<!--[if (gte IE 6)&(lt IE 8)]>內容<![endif]-->
+內容只從 IE6 以後及 IE8 之前版本會顯現。
+
+<!--[if (IE 7)|(IE 6)]>內容<![endif]-->
+內容只有 IE7 及 IE6 會顯現。
+
+<!--[if gte IE 7]><!-->內容<!--<![endif]-->
+內容在 IE7 及其較新版本，以及 IE 以外都會顯現。
+*/
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------For Other Browser-----------------*/
+
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+}
+
+
+/* all firefox */
+@-moz-document url-prefix(){
+
+}
+
+
+/* opera */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+
+} 
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------For iPad iPhone-----------------*/
+
+/* Note: iPad for 橫向 */
+@media only screen and (max-width: 1024px) and (orientation:landscape) {
+
+}
+
+
+/* Note: iPad for 直立 */
+@media only screen and (min-width: 768px) and (max-width: 979px) and (orientation:portrait) {
+
+}
+
+
+/* Note: iPhone for a width of 480px 橫向 */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+}  
+
+
+/* Note: iPhone for a width of 320px 直立 */
+@media only screen and (max-width: 320px) {
+
+}
+
+
+/* Portrait 直式 (For iPad iPhone) */
+@media screen and (orientation:portrait) {
+   /* Portrait styles here */
+}
+
+
+/* Landscape 橫式 (For iPad iPhone PS：桌機也會以這樣式為主) */
+@media screen and (orientation:landscape) {
+   /* Landscape styles here */
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 解析度 Layout */
+/*
+5 layouts:
+
+240px for 0-320
+480px for 321-600
+768px for 601-959
+960px for 960-1280
+1200px for 1280-inf.
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 錨點使用須知-須加空格 */
+/* <a name="top" id="top">&nbsp;</a> */
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 手機網頁用限制縮放定義 */
+/*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*/
+/*<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">*/
+/*maximum-scale也設為1，其實就是不讓使用者縮放，以維持頁面的設計*/
+
+
+/* viewport */
+/*
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+開發者決定手持裝置的縮放比例設定
+width=device-width 定義手持式裝置網頁寬度。設定成device-width可讓瀏覽器自行判斷手持式裝置寬度，也可以直接設定大小，如width=320。
+initial-scale 畫面是以多少倍的 viewport 來顯示
+minimum-scale 畫面縮小倍率限制。
+maximum-scale 畫面放大倍率限制。: 0 < user-scalable < 10.0，預設值0.25。
+user-scalable 是否允許放大或縮小視窗(預設為YES)。
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* apple-mobile-web-app-capable */
+/*
+<meta name="apple-mobile-web-app-capable" content="yes">
+定義用戶是否將視窗啟用為全螢幕模式，用戶可透過新增書籤將網頁連結新增為一個桌面ICON，這樣用戶在啟動時就不會出線瀏覽器的上下選單，畫面看起來就像一個App
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* apple-mobile-web-app-status-bar-style */
+/*
+設定iPhone狀態列的顏色
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+default:灰色
+black:黑色
+black-translucent:黑色半透明(不建議使用)
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* format-detection */
+/*
+啟用或關閉瀏覽器自動偵測，如將電話自動轉換為連結(telephone=yes or telephone=no)
+<meta name="format-detection" content="telephone=no">
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* apple-touch-icon */
+/*
+設定桌面ICON圖片(57px x 57px)
+<link rel="apple-touch-icon" href="img/troie_icon.png" />
+<link rel="apple-touch-icon-precomposed" href="img/troie_icon.png" />
+
+<link rel="apple-touch-icon" 					        href="apple-touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" 		href="apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" 	href="apple-touch-icon-iphone-retina-display.png" />
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* apple-touch-startup-image */
+/*
+載入網頁時的等待畫面(320px x 460px)
+<link rel="apple-touch-startup-image" href="img/wait.png">
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*
+想在網頁載入完成時隱藏最頂的網址列（需要設定最小高度），可加入以下的 Javascript:
+window.onload = function(){
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 100);
+}
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*
+防止用戶拉動網頁，可加入以下的 Javascript:
+document.addEventListener("touchmove", function(event){
+    event.preventDefault();
+}, false);
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*讓IE吃Html5標籤*/
+/*
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+*/
+
+
+/*
+<!--[if lt IE 7 ]> <html class="ie6 no-js oldie" lang="zh-tw"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 no-js oldie" lang="zh-tw"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 no-js oldie" lang="zh-tw"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 no-js" lang="zh-tw"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="zh-tw"> <!--<![endif]-->
+*/
+
+/*
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 網頁視窗、我的最愛 - Icon圖片語法 */
+/*
+<link rel="icon" type="image/png" href="http://test02.phimedia.tv/3.0/images/main_icon.png" />
+<link rel="bookmark" type="image/png" href="http://test02.phimedia.tv/3.0/images/main_icon.png" />
+<link rel="shortcut icon" type="image/png" href="http://test02.phimedia.tv/3.0/images/main_icon.png" />
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* Facebook - 分享連結圖片讀取語法 */
+/*
+<link rel="image_src" type="image/jpeg" href="http://xxxxxxx.xxxxx.xxx/xxxxx.png" />
+*/
+
+
+/* Facebook - 分享連結的敘述內容 */
+/*
+塗鴉牆上單篇文章標題
+<meta property="og:title" content="xxxxx" />
+
+塗鴉牆上單篇文章敘述
+<meta property="og:description" content="xxxxx" />
+
+分享類型定義
+<meta property="og:type" content="website" />
+
+塗鴉牆上單篇文章網址
+<meta property="og:url" content="http://www.xxxxx.com/" />
+
+塗鴉牆上單篇文章縮圖
+<meta property="og:image" content="http://xxxxx/images/fb_pic.png" />
+<link rel="image_src" href="http://xxxxx/images/fb_pic.png" />
+
+塗鴉牆上單篇文章簡短定義
+<meta property="og:site_name" content="xxxxx" />
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*twitter card*/
+/*
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@rei">
+<meta name="twitter:creator" content="@rei">
+<meta name="twitter:url" content="http://www.rei1440project.com/">
+<meta name="twitter:description" content="REI has created a minute-by-minute timeline making up a 24-hour period. The goal is to fill each and every minute of this virtual day with photography representing our collective love of outside. Add your photo. Find and share photos of your favorite activities - climbing, cycling, paddling, hiking, camping, skiing and more.">
+<meta name="twitter:title" content="REI 1440 Project - Celebrating every minute spent outside">
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*
+標簽為 fieldset 元素定義標題。
+效果演示網址：http://www.w3school.com.cn/tiy/t.asp?f=html_fieldset
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 其他 Meta 值設定 */
+/*
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> //使用最新的瀏覽器引擎
+
+<meta http-equiv="cache-control" content="no-cache"> //清除網頁暫存語法
+
+<meta name="author" content="ReLoad">
+<meta name="keywords" content="#(用半形逗號分開)">
+<meta name="description" content="#頁面相關敘述內容">
+<meta name="Copyright" content="#" />
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*使用一種風格統一的大註釋分隔每個部分：（範例）*/
+
+/* @group general styles ----------------------------------------------------------------------------------------*/
+/* end */
+
+/*  @group helper styles ---------------------------------------------------------------------------------------*/
+/* end */
+
+/*  @group page structure ----------------------------------------------------------------------------------------*/
+/* end */
+
+/*  @group page components ----------------------------------------------------------------------------------------*/
+/* end */
+
+/*  @group overrides ----------------------------------------------------------------------------------------*/
+/* end */
+
+/*
+注意：在分隔代碼時分得越細緻，越合理，代碼就越容易理解，而且能夠更快的而找到尋找的規則。
+
+在css文件中要加入適當的注釋，以便日後查看文件時知道這一部分的功能，並且要使用關鍵字來區分重要注釋。
+
+例如：
+
+（1）@todo：表示某些東西需要在以後進行修改、修復或復查
+
+（2）@bugfix：表示代碼或特殊瀏覽器遇到的問題
+
+（3）@workaround：表示並不完善的權宜之計
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*jQuery/JavaScript Liberary在CDN失效時failover作法*/
+/*
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*網頁自動轉址語法*/
+/*<body onload="location.replace('http://www.google.com.tw');"/>*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* Retina Displays Media Queries（視網膜螢幕） */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+  .logo {
+      background-image: (img/logo2x.png);
+      background-size: 200px 40px;
+      }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*自定義移動版 Safari 高亮顏色*/
+#example {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*防止手機或平板橫放時字體變大*/
+html, body {
+  -webkit-text-size-adjust: none !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+     html {
+        -webkit-text-size-adjust: none;
+        -webkit-text-size-adjust: 100%;
+     }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* Apple 獨有字型圓滑屬性 */
+html, body {
+  font-smoothing        : antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-family           : "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*[CSS:overflow-scrolling]讓iPad或iPhone的捲軸更順暢*/
+.ipad-iphone {
+  -webkit-overflow-scrolling: touch;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 所有<a>設定 */
+a { position:relative; z-index:999; }/* 在某些狀狀下，Android 手機版網頁需加 position 與 z-index 屬性，點選才有動作。 */
+a:link, a:visited {color:#8c6e4b;}
+a:hover, a:active {color:#39F;}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 文字刻蝕陰影 */
+.word_shadow {filter:dropshadow(color=#ffffff,offx=1,offy=1,); text-shadow:#ffffff 1px 1px; filter:none \9; text-shadow:none \9;}
+.word_shadow {text-shadow:0px 1px 3px #ffffff;}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 文字內陰影(IE無效果) */
+.word_insideshadow {text-shadow:1px 1px 1px #fcf5ec, 0 0 0 #3f332d; color: rgba(68, 30, 21, 0.5);}
+
+/* 文字內陰影(IE無效果) */
+.word_insideshadow {
+  background-color       : #c8c8c8;
+  color                  : transparent;
+  text-shadow            : 0px 2px 4px rgba(255,255,255,0.7);
+  -webkit-background-clip: text;
+  -moz-background-clip   : text;
+  background-clip        : text;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 背景透明 */
+.transparent {
+background  : rgba(255,255,255,0.4); /*背景透明-IE6,7,8不支援*/
+
+background  : #FFF;
+filter      : alpha(opacity=40); /*背景透明*/
+filter      : alpha(opacity=40,Style=1); /*背景漸層透明*/
+-moz-opacity: 0.4; /*Firefox用背景透明*/
+opacity     : 0.5; /*支持CSS3的浏览器(FF 1.5也支持)*/
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*圖片透明*/
+.picture_transparent {
+  filter        : alpha(opacity=50); /*標準CSS語法，適用Firefox, Safari, and Opera。*/
+  -moz-opacity  : 0.5; /*ie只識別這個語法，也只有ie識別這個語法。*/
+  -khtml-opacity: 0.5; /*給早期的Mozilla瀏覽器看，像是Netscape Navigator。*/
+  opacity       : 0.5; /*給早期的Safari (1.x)看的。*/
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 圖層陰影效果 *//*0px 1px 10px 0px 有左至右為X軸、Y軸、陰影大小、擴展*/
+/*外陰影*/
+.outside_shadow {
+box-shadow        : 0px 1px 10px 0px #cdac90;
+-moz-box-shadow   : 0px 1px 10px 0px #cdac90;
+-webkit-box-shadow: 0px 1px 10px 0px #cdac90;
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=90, Color='#cdac90')"; /*For IE 8*/
+}
+
+/*內陰影*/
+.inside_shadow {
+box-shadow        :inset 0px 1px 10px 0px #cdac90;
+-moz-box-shadow   :inset 0px 1px 10px 0px #cdac90;
+-webkit-box-shadow:inset 0px 1px 10px 0px #cdac90;
+-webkit-appearance:none;/*iphone開發下遇到的 input 內陰影無法出現的解決方法*/
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90'); /*For IE 5.5 - 7*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=-3, Direction=90, Color='#cdac90')"; /*For IE 8*/
+}
+
+/*上下內陰影*/
+.inside_shadow {
+    -moz-box-shadow:    inset  0px  8px 8px -8px #000, 
+                        inset  0px -8px 8px -8px #696868;
+    -webkit-box-shadow: inset  0px  8px 8px -8px #000, 
+                        inset  0px -8px 8px -8px #696868;
+     box-shadow:        inset  0px  8px 8px -8px #000, 
+                        inset  0px -8px 8px -8px #696868;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*圓角*/
+.border-radius {
+  border-radius        : 15px;
+  -moz-border-radius   : 15px;
+  -webkit-border-radius: 15px;
+}
+.border-radius {
+  border-radius        : 15px 15px 15px 15px;
+  -moz-border-radius   : 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 按鈕圖片變換 */
+a.button {width:100px; height:100px; float:left; overflow:hidden; cursor:pointer; text-decoration:none;}
+a.button:link, a.button:visited {background:url(images/main_buttons.png) /*-446px -148px*/ top no-repeat;}
+a.button:hover, a.button:active {background:url(images/main_buttons.png) /*-398px -148px*/ bottom no-repeat;}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* 背景屬性 */
+/*背景圖尺寸（數值表示方式）*/
+.background-size{
+background-size:300px 100px;
+}
+/*背景圖尺寸（百分比表示方式）*/
+.background-size2{
+background-size:40% 80%;
+}
+/*背景圖尺寸（等比擴展圖片來填滿元素，即cover值）*/
+.background-size3{
+background-size:cover;
+}
+/*背景圖尺寸（等比縮小圖片來適應元素的尺寸，即contain值）*/
+.background-size4{
+background-size:contain;
+}
+/*背景圖尺寸（以圖片自身大小來填充元素，即auto值）*/
+.background-size5{
+background-size:auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+.text {
+text-align  : justify; /*文字齊行*/
+text-justify: distribute; /*文字左右齊行*/
+text-justify: inter-ideograph; /*英文字斷行*/
+}
+
+/*強制文字水平排列不換行(遇空白也不換行)*/
+.text { white-space: nowrap; }
+
+/*自動換行*/
+.auto_break {
+  word-wrap : break-word;
+  word-break: normal;
+}
+
+/*英文單字斷行(依照區塊大小強制段行,但會截斷英文單字)*/
+.English_word_break {
+  word-break: break-all;
+}
+
+/*英文左右齊行*/
+.English {
+  word-wrap : break-word;
+  word-break: break-all;
+}
+
+/*中文字左右分散齊行*/
+.chinese-text {
+text-align     : justify;
+text-justify   : distribute-all-lines;
+text-align-last: justify;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*屬性選擇器在为不帶有 class 或 id 的表單設置样式時特別有用：*/
+input[type="text"] { }
+input[type="button"] { }
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*進度條立體陰影*/
+.progress_bars {
+width:auto;
+height:auto;
+border-radius: 13px;
+box-shadow: 0px 1px 5px 0px #555/*全域陰影*/,
+			inset 0px 10px 10px -8px #fff/*上陰影*/,
+			inset 0px 1px 1px 0px #ddd/*1px 上陰影*/,
+			inset 0px -8px 8px -9px #666/*下陰影*/;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*引入 CSS 方式*/
+@import url("reset_all.css");
+@import url("style.css");
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*修正 facebook comments 框架為 100％*/
+.fb-comments, .fb-comments span[style], .fb-comments iframe[style] {width: 100% !important;}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+hr {
+  height       : 0px;
+  border       : none;
+  border-bottom: 1px solid rgba(255,255,255,0.13);
+  border-top   : 1px solid rgba(0,0,0,1);
+  margin       : 9px 10px;
+  clear        : both;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*修正 Chrome 背景圖以 CSS3 「background-size: cover;」 會產生的 1px 誤差，要改用以下語法*/
+.chrome-background {
+  background-size: 100% auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*框架內框線語法*/
+.order{
+  border            : 10px solid green;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing   : border-box;
+  -ms-box-sizing    : border-box;
+  box-sizing        : border-box;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*空白空格代碼：&nbsp;*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*Chrome要將字體大小設於小於12px，必須再加上一個webkit獨有的屬性*/
+.chrome-mini-font-size {
+  -webkit-text-size-adjust:none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*E-Mail 連結語法
+
+<a href="mailto:who@yahoo.com.tw">歡迎來信</a>
+
+<a href="mailto:who1@yahoo.com.tw, who2@yahoo.com.tw, who3@yahoo.com.tw">歡迎來信</a>
+
+<a href="mailto:who1@yahoo.com.tw, who2@yahoo.com.tw ?subject=order list">歡迎來信</a>
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*
+點擊空連結頁面不會有任何動作語法
+<a href="javascript:void(0)"></a>
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
